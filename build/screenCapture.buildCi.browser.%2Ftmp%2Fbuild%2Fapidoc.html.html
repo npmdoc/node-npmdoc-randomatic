@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/jonschlinkert/randomatic"
-
-    >randomatic (v1.1.6)</a>
+    <a href="https://github.com/jonschlinkert/randomatic">randomatic (v1.1.6)</a>
 </h1>
 <h4>Generate randomized strings of a specified length, fast. Only the length is necessary, but you can optionally generate patterns using any combination of numeric, alpha-numeric, alphabetical, special or custom characters.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.randomatic">module randomatic</a><ol>
 
@@ -86,21 +79,21 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function randomatic(pattern, length, options) {
-  if (typeof pattern === &#x27;undefined&#x27;) {
-    throw new Error(&#x27;randomatic expects a string or number.&#x27;);
+  if (typeof pattern === 'undefined') {
+    throw new Error('randomatic expects a string or number.');
   }
 
   var custom = false;
   if (arguments.length === 1) {
-    if (typeof pattern === &#x27;string&#x27;) {
+    if (typeof pattern === 'string') {
       length = pattern.length;
 
     } else if (isNumber(pattern)) {
-      options = {}; length = pattern; pattern = &#x27;*&#x27;;
+      options = {}; length = pattern; pattern = '*';
     }
   }
 
-  if (typeOf(length) === &#x27;object&#x27; &#x26;&#x26; length.hasOwnProperty(&#x27;chars&#x27;)) {
+  if (typeOf(length) === 'object' &amp;&amp; length.hasOwnProperty('chars')) {
     options = length;
     pattern = options.chars;
     length = pattern.length;
@@ -108,16 +101,16 @@
   }
 
   var opts = options || {};
-  var mask = &#x27;&#x27;;
-  var res = &#x27;&#x27;;
+  var mask = '';
+  var res = '';
 
   // Characters to be used
-  if (pattern.indexOf(&#x27;?&#x27;) !== -1) mask += opts.chars;
-  if (pattern.indexOf(&#x27;a&#x27;) !== -1) mask += type.lower;
-  if (pattern.indexOf(&#x27;A&#x27;) !== -1) mask += type.upper;
-  if (pattern.indexOf(&#x27;0&#x27;) !== -1) mask += type.number;
-  if (pattern.indexOf(&#x27;!&#x27;) !== -1) mask += type.special;
-  if (pattern.indexOf(&#x27;*&#x27;) !== -1) mask += type.all;
+  if (pattern.indexOf('?') !== -1) mask += opts.chars;
+  if (pattern.indexOf('a') !== -1) mask += type.lower;
+  if (pattern.indexOf('A') !== -1) mask += type.upper;
+  if (pattern.indexOf('0') !== -1) mask += type.number;
+  if (pattern.indexOf('!') !== -1) mask += type.special;
+  if (pattern.indexOf('*') !== -1) mask += type.all;
   if (custom) mask += pattern;
 
   while (length--) {
@@ -137,3 +130,4 @@
     ]
 </div>
 </div>
+</body></html>

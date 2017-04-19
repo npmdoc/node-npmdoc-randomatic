@@ -61,12 +61,73 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.randomatic">module randomatic</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.randomatic.randomatic">
+            function <span class="apidocSignatureSpan"></span>randomatic
+            <span class="apidocSignatureSpan">(pattern, length, options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.randomatic" id="apidoc.module.randomatic">module randomatic</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.randomatic.randomatic" id="apidoc.element.randomatic.randomatic">
+        function <span class="apidocSignatureSpan"></span>randomatic
+        <span class="apidocSignatureSpan">(pattern, length, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function randomatic(pattern, length, options) {
+  if (typeof pattern === &#x27;undefined&#x27;) {
+    throw new Error(&#x27;randomatic expects a string or number.&#x27;);
+  }
+
+  var custom = false;
+  if (arguments.length === 1) {
+    if (typeof pattern === &#x27;string&#x27;) {
+      length = pattern.length;
+
+    } else if (isNumber(pattern)) {
+      options = {}; length = pattern; pattern = &#x27;*&#x27;;
+    }
+  }
+
+  if (typeOf(length) === &#x27;object&#x27; &#x26;&#x26; length.hasOwnProperty(&#x27;chars&#x27;)) {
+    options = length;
+    pattern = options.chars;
+    length = pattern.length;
+    custom = true;
+  }
+
+  var opts = options || {};
+  var mask = &#x27;&#x27;;
+  var res = &#x27;&#x27;;
+
+  // Characters to be used
+  if (pattern.indexOf(&#x27;?&#x27;) !== -1) mask += opts.chars;
+  if (pattern.indexOf(&#x27;a&#x27;) !== -1) mask += type.lower;
+  if (pattern.indexOf(&#x27;A&#x27;) !== -1) mask += type.upper;
+  if (pattern.indexOf(&#x27;0&#x27;) !== -1) mask += type.number;
+  if (pattern.indexOf(&#x27;!&#x27;) !== -1) mask += type.special;
+  if (pattern.indexOf(&#x27;*&#x27;) !== -1) mask += type.all;
+  if (custom) mask += pattern;
+
+  while (length--) {
+    res += mask.charAt(parseInt(Math.random() * mask.length, 10));
+  }
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
