@@ -1,9 +1,14 @@
-# api documentation for  [randomatic (v1.1.6)](https://github.com/jonschlinkert/randomatic)  [![npm package](https://img.shields.io/npm/v/npmdoc-randomatic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-randomatic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-randomatic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-randomatic)
+# npmdoc-randomatic
+
+#### api documentation for  [randomatic (v1.1.6)](https://github.com/jonschlinkert/randomatic)  [![npm package](https://img.shields.io/npm/v/npmdoc-randomatic.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-randomatic) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-randomatic.svg)](https://travis-ci.org/npmdoc/node-npmdoc-randomatic)
+
 #### Generate randomized strings of a specified length, fast. Only the length is necessary, but you can optionally generate patterns using any combination of numeric, alpha-numeric, alphabetical, special or custom characters.
 
-[![NPM](https://nodei.co/npm/randomatic.png?downloads=true)](https://www.npmjs.com/package/randomatic)
+[![NPM](https://nodei.co/npm/randomatic.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/randomatic)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-randomatic/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-randomatic_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-randomatic/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-randomatic/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-randomatic/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-randomatic/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-randomatic/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-randomatic/build/screenCapture.npmPackageListing.svg)
 
@@ -66,17 +71,14 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "doowb",
-            "email": "brian.woodward@gmail.com"
+            "name": "doowb"
         },
         {
-            "name": "jonschlinkert",
-            "email": "github@sellside.com"
+            "name": "jonschlinkert"
         }
     ],
     "name": "randomatic",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jonschlinkert/randomatic.git"
@@ -111,16 +113,6 @@
     "version": "1.1.6"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module randomatic](#apidoc.module.randomatic)
-
-
-
-# <a name="apidoc.module.randomatic"></a>[module randomatic](#apidoc.module.randomatic)
 
 
 
